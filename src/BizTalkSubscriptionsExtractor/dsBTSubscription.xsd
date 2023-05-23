@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBTSubscription" targetNamespace="http://tempuri.org/dsBTSubscription.xsd" xmlns:mstns="http://tempuri.org/dsBTSubscription.xsd" xmlns="http://tempuri.org/dsBTSubscription.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BizTalkMgmtDb" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BizTalkMgmtDb (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BizTalkSubscriptionsExtractor.Properties.Settings.GlobalReference.Default.BizTalkMgmtDb" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BizTalkMsgBoxDb" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BizTalkMsgBoxDb (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BizTalkSubscriptionsExtractor.Properties.Settings.GlobalReference.Default.BizTalkMsgBoxDb" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bts_receiveportTableAdapter" GeneratorDataComponentClassName="bts_receiveportTableAdapter" Name="bts_receiveport" UserDataComponentName="bts_receiveportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bts_receiveport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nID, nvcName, bTwoWay, nAuthentication, nSendPipelineId, nvcSendPipelineData, nTracking, uidGUID, nvcCustomData, DateModified, nApplicationID, nvcDescription, bRouteFailedMessage FROM dbo.bts_receiveport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="nvcName" DataSetColumn="nvcName" />
+              <Mapping SourceColumn="bTwoWay" DataSetColumn="bTwoWay" />
+              <Mapping SourceColumn="nAuthentication" DataSetColumn="nAuthentication" />
+              <Mapping SourceColumn="nSendPipelineId" DataSetColumn="nSendPipelineId" />
+              <Mapping SourceColumn="nvcSendPipelineData" DataSetColumn="nvcSendPipelineData" />
+              <Mapping SourceColumn="nTracking" DataSetColumn="nTracking" />
+              <Mapping SourceColumn="uidGUID" DataSetColumn="uidGUID" />
+              <Mapping SourceColumn="nvcCustomData" DataSetColumn="nvcCustomData" />
+              <Mapping SourceColumn="DateModified" DataSetColumn="DateModified" />
+              <Mapping SourceColumn="nApplicationID" DataSetColumn="nApplicationID" />
+              <Mapping SourceColumn="nvcDescription" DataSetColumn="nvcDescription" />
+              <Mapping SourceColumn="bRouteFailedMessage" DataSetColumn="bRouteFailedMessage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bts_sendportTableAdapter" GeneratorDataComponentClassName="bts_sendportTableAdapter" Name="bts_sendport" UserDataComponentName="bts_sendportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bts_sendport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nID, nvcName, nApplicationTypeId, nvcApplicationTypeData, nvcEncryptionCert, nvcEncryptionCertHash, nSendPipelineID, nvcSendPipelineData, bDynamic, bTwoWay, nReceivePipelineID, nvcReceivePipelineData, nTracking, nPortStatus, nvcFilter, uidGUID, nvcCustomData, nPriority, DateModified, nApplicationID, nvcDescription, bStopSendingOnFailure, bRouteFailedMessage, bOrderedDeliveryforDynamicPort, bOrderPerAddressForDynamicPort FROM dbo.bts_sendport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="nvcName" DataSetColumn="nvcName" />
+              <Mapping SourceColumn="nApplicationTypeId" DataSetColumn="nApplicationTypeId" />
+              <Mapping SourceColumn="nvcApplicationTypeData" DataSetColumn="nvcApplicationTypeData" />
+              <Mapping SourceColumn="nvcEncryptionCert" DataSetColumn="nvcEncryptionCert" />
+              <Mapping SourceColumn="nvcEncryptionCertHash" DataSetColumn="nvcEncryptionCertHash" />
+              <Mapping SourceColumn="nSendPipelineID" DataSetColumn="nSendPipelineID" />
+              <Mapping SourceColumn="nvcSendPipelineData" DataSetColumn="nvcSendPipelineData" />
+              <Mapping SourceColumn="bDynamic" DataSetColumn="bDynamic" />
+              <Mapping SourceColumn="bTwoWay" DataSetColumn="bTwoWay" />
+              <Mapping SourceColumn="nReceivePipelineID" DataSetColumn="nReceivePipelineID" />
+              <Mapping SourceColumn="nvcReceivePipelineData" DataSetColumn="nvcReceivePipelineData" />
+              <Mapping SourceColumn="nTracking" DataSetColumn="nTracking" />
+              <Mapping SourceColumn="nPortStatus" DataSetColumn="nPortStatus" />
+              <Mapping SourceColumn="nvcFilter" DataSetColumn="nvcFilter" />
+              <Mapping SourceColumn="uidGUID" DataSetColumn="uidGUID" />
+              <Mapping SourceColumn="nvcCustomData" DataSetColumn="nvcCustomData" />
+              <Mapping SourceColumn="nPriority" DataSetColumn="nPriority" />
+              <Mapping SourceColumn="DateModified" DataSetColumn="DateModified" />
+              <Mapping SourceColumn="nApplicationID" DataSetColumn="nApplicationID" />
+              <Mapping SourceColumn="nvcDescription" DataSetColumn="nvcDescription" />
+              <Mapping SourceColumn="bStopSendingOnFailure" DataSetColumn="bStopSendingOnFailure" />
+              <Mapping SourceColumn="bRouteFailedMessage" DataSetColumn="bRouteFailedMessage" />
+              <Mapping SourceColumn="bOrderedDeliveryforDynamicPort" DataSetColumn="bOrderedDeliveryforDynamicPort" />
+              <Mapping SourceColumn="bOrderPerAddressForDynamicPort" DataSetColumn="bOrderPerAddressForDynamicPort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bts_sendport_transportTableAdapter" GeneratorDataComponentClassName="bts_sendport_transportTableAdapter" Name="bts_sendport_transport" UserDataComponentName="bts_sendport_transportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bts_sendport_transport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nID, nvcAddress, nTransportTypeId, nvcTransportTypeData, bOrderedDelivery, nDeliveryNotification, nRetryCount, nRetryInterval, bIsServiceWindow, dtFromTime, dtToTime, bIsPrimary, bSSOMappingExists, nSendPortID, uidGUID, DateModified, nSendHandlerID FROM dbo.bts_sendport_transport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="nvcAddress" DataSetColumn="nvcAddress" />
+              <Mapping SourceColumn="nTransportTypeId" DataSetColumn="nTransportTypeId" />
+              <Mapping SourceColumn="nvcTransportTypeData" DataSetColumn="nvcTransportTypeData" />
+              <Mapping SourceColumn="bOrderedDelivery" DataSetColumn="bOrderedDelivery" />
+              <Mapping SourceColumn="nDeliveryNotification" DataSetColumn="nDeliveryNotification" />
+              <Mapping SourceColumn="nRetryCount" DataSetColumn="nRetryCount" />
+              <Mapping SourceColumn="nRetryInterval" DataSetColumn="nRetryInterval" />
+              <Mapping SourceColumn="bIsServiceWindow" DataSetColumn="bIsServiceWindow" />
+              <Mapping SourceColumn="dtFromTime" DataSetColumn="dtFromTime" />
+              <Mapping SourceColumn="dtToTime" DataSetColumn="dtToTime" />
+              <Mapping SourceColumn="bIsPrimary" DataSetColumn="bIsPrimary" />
+              <Mapping SourceColumn="bSSOMappingExists" DataSetColumn="bSSOMappingExists" />
+              <Mapping SourceColumn="nSendPortID" DataSetColumn="nSendPortID" />
+              <Mapping SourceColumn="uidGUID" DataSetColumn="uidGUID" />
+              <Mapping SourceColumn="DateModified" DataSetColumn="DateModified" />
+              <Mapping SourceColumn="nSendHandlerID" DataSetColumn="nSendHandlerID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bts_sendportgroupTableAdapter" GeneratorDataComponentClassName="bts_sendportgroupTableAdapter" Name="bts_sendportgroup" UserDataComponentName="bts_sendportgroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bts_sendportgroup" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nID, nvcName, nPortStatus, nvcFilter, uidGUID, nvcCustomData, DateModified, nApplicationID, nvcDescription FROM dbo.bts_sendportgroup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="nvcName" DataSetColumn="nvcName" />
+              <Mapping SourceColumn="nPortStatus" DataSetColumn="nPortStatus" />
+              <Mapping SourceColumn="nvcFilter" DataSetColumn="nvcFilter" />
+              <Mapping SourceColumn="uidGUID" DataSetColumn="uidGUID" />
+              <Mapping SourceColumn="nvcCustomData" DataSetColumn="nvcCustomData" />
+              <Mapping SourceColumn="DateModified" DataSetColumn="DateModified" />
+              <Mapping SourceColumn="nApplicationID" DataSetColumn="nApplicationID" />
+              <Mapping SourceColumn="nvcDescription" DataSetColumn="nvcDescription" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bts_orchestration_portTableAdapter" GeneratorDataComponentClassName="bts_orchestration_portTableAdapter" Name="bts_orchestration_port" UserDataComponentName="bts_orchestration_portTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bts_orchestration_port" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nID, uidGUID, nOrchestrationID, nPortTypeID, nvcName, nPolarity, nBindingOption, nRolePortTypeID, bLink FROM dbo.bts_orchestration_port</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="uidGUID" DataSetColumn="uidGUID" />
+              <Mapping SourceColumn="nOrchestrationID" DataSetColumn="nOrchestrationID" />
+              <Mapping SourceColumn="nPortTypeID" DataSetColumn="nPortTypeID" />
+              <Mapping SourceColumn="nvcName" DataSetColumn="nvcName" />
+              <Mapping SourceColumn="nPolarity" DataSetColumn="nPolarity" />
+              <Mapping SourceColumn="nBindingOption" DataSetColumn="nBindingOption" />
+              <Mapping SourceColumn="nRolePortTypeID" DataSetColumn="nRolePortTypeID" />
+              <Mapping SourceColumn="bLink" DataSetColumn="bLink" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bts_orchestrationTableAdapter" GeneratorDataComponentClassName="bts_orchestrationTableAdapter" Name="bts_orchestration" UserDataComponentName="bts_orchestrationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bts_orchestration" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nID, uidGUID, uidOrchestrationType, nAssemblyID, nItemID, nvcNamespace, nvcName, nvcFullName, nOrchestrationInfo, nOrchestrationStatus, nAdminHostID, dtModified, nvcDescription FROM dbo.bts_orchestration</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="uidGUID" DataSetColumn="uidGUID" />
+              <Mapping SourceColumn="uidOrchestrationType" DataSetColumn="uidOrchestrationType" />
+              <Mapping SourceColumn="nAssemblyID" DataSetColumn="nAssemblyID" />
+              <Mapping SourceColumn="nItemID" DataSetColumn="nItemID" />
+              <Mapping SourceColumn="nvcNamespace" DataSetColumn="nvcNamespace" />
+              <Mapping SourceColumn="nvcName" DataSetColumn="nvcName" />
+              <Mapping SourceColumn="nvcFullName" DataSetColumn="nvcFullName" />
+              <Mapping SourceColumn="nOrchestrationInfo" DataSetColumn="nOrchestrationInfo" />
+              <Mapping SourceColumn="nOrchestrationStatus" DataSetColumn="nOrchestrationStatus" />
+              <Mapping SourceColumn="nAdminHostID" DataSetColumn="nAdminHostID" />
+              <Mapping SourceColumn="dtModified" DataSetColumn="dtModified" />
+              <Mapping SourceColumn="nvcDescription" DataSetColumn="nvcDescription" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SubscriptionTableAdapter" GeneratorDataComponentClassName="SubscriptionTableAdapter" Name="Subscription" UserDataComponentName="SubscriptionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMsgBoxDb (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        a.nvcName AS Name, c.nvcName AS BTAppName, d.nvcName AS ClassName, a.uidSubID, a.uidSubGroupID, a.nvcApplicationName AS HostName, a.uidPortID, a.uidPredicateGroupID, a.fEnabled, a.fPaused
+FROM            Subscription AS a INNER JOIN
+                         Services AS b ON a.uidServiceID = b.uidServiceID INNER JOIN
+                         Modules AS c ON b.nModuleID = c.nModuleID INNER JOIN
+                         ServiceClasses AS d ON a.uidClassID = d.uidServiceClassID
+WHERE        (a.uidInstanceID IS NULL)
+ORDER BY BTAppName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="uidSubID" DataSetColumn="uidSubID" />
+              <Mapping SourceColumn="uidSubGroupID" DataSetColumn="uidSubGroupID" />
+              <Mapping SourceColumn="uidPortID" DataSetColumn="uidPortID" />
+              <Mapping SourceColumn="uidPredicateGroupID" DataSetColumn="uidPredicateGroupID" />
+              <Mapping SourceColumn="fEnabled" DataSetColumn="fEnabled" />
+              <Mapping SourceColumn="fPaused" DataSetColumn="fPaused" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="BTAppName" DataSetColumn="BTAppName" />
+              <Mapping SourceColumn="ClassName" DataSetColumn="ClassName" />
+              <Mapping SourceColumn="HostName" DataSetColumn="HostName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PredicateGroupTableAdapter" GeneratorDataComponentClassName="PredicateGroupTableAdapter" Name="PredicateGroup" UserDataComponentName="PredicateGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMsgBoxDb (Settings)" DbObjectName="BizTalkMsgBoxDb.dbo.PredicateGroup" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT uidPredicateANDGroupID, uidPredicateORGroupID, nNumFirstPassPredicates, nNumSecondPassPredicates, fIsDistributionList FROM dbo.PredicateGroup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="uidPredicateANDGroupID" DataSetColumn="uidPredicateANDGroupID" />
+              <Mapping SourceColumn="uidPredicateORGroupID" DataSetColumn="uidPredicateORGroupID" />
+              <Mapping SourceColumn="nNumFirstPassPredicates" DataSetColumn="nNumFirstPassPredicates" />
+              <Mapping SourceColumn="nNumSecondPassPredicates" DataSetColumn="nNumSecondPassPredicates" />
+              <Mapping SourceColumn="fIsDistributionList" DataSetColumn="fIsDistributionList" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConditionsTableAdapter" GeneratorDataComponentClassName="ConditionsTableAdapter" Name="Conditions" UserDataComponentName="ConditionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMsgBoxDb (Settings)" DbObjectName="BizTalkMsgBoxDb.dbo.BitwiseANDPredicates" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select nID,'&amp;' PredType, uidPropID, vtValue,uidPredicateGroupID, tnPass from BitwiseANDPredicates
+union
+select nID,'==' PredType, uidPropID, vtValue,uidPredicateGroupID, 1 as tnPass from EqualsPredicates
+union
+select nID,'==' PredType, uidPropID, vtValue,uidPredicateGroupID, 2 as tnPass from EqualsPredicates2ndPass
+union
+select nID,'exists' PredType, uidPropID,'' vtValue,uidPredicateGroupID, tnPass from ExistsPredicates
+union
+select nID,'&gt;=' PredType, uidPropID, vtValue,uidPredicateGroupID, tnPass from GreaterThanOrEqualsPredicates
+union
+select nID,'&gt;' PredType, uidPropID, vtValue,uidPredicateGroupID, tnPass from GreaterThanPredicates
+union
+select nID,'&lt;=' PredType, uidPropID, vtValue,uidPredicateGroupID, tnPass from LessThanOrEqualsPredicates
+union
+select nID,'&lt;' PredType, uidPropID, vtValue,uidPredicateGroupID, tnPass from LessThanPredicates
+union
+select nID,'!=' PredType, uidPropID, vtValue,uidPredicateGroupID, tnPass from NotEqualsPredicates
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nID" DataSetColumn="nID" />
+              <Mapping SourceColumn="PredType" DataSetColumn="PredType" />
+              <Mapping SourceColumn="uidPropID" DataSetColumn="uidPropID" />
+              <Mapping SourceColumn="vtValue" DataSetColumn="vtValue" />
+              <Mapping SourceColumn="uidPredicateGroupID" DataSetColumn="uidPredicateGroupID" />
+              <Mapping SourceColumn="tnPass" DataSetColumn="tnPass" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bt_DocumentSpecTableAdapter" GeneratorDataComponentClassName="bt_DocumentSpecTableAdapter" Name="bt_DocumentSpec" UserDataComponentName="bt_DocumentSpecTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BizTalkMgmtDb (Settings)" DbObjectName="BizTalkMgmtDb.dbo.bt_DocumentSpec" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, msgtype, is_property_schema
+FROM            bt_DocumentSpec
+WHERE        (is_property_schema = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="msgtype" DataSetColumn="msgtype" />
+              <Mapping SourceColumn="is_property_schema" DataSetColumn="is_property_schema" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBTSubscription" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBTSubscription" msprop:Generator_UserDSName="dsBTSubscription">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bts_receiveport" msprop:Generator_TableClassName="bts_receiveportDataTable" msprop:Generator_TableVarName="tablebts_receiveport" msprop:Generator_RowChangedName="bts_receiveportRowChanged" msprop:Generator_TablePropName="bts_receiveport" msprop:Generator_RowDeletingName="bts_receiveportRowDeleting" msprop:Generator_RowChangingName="bts_receiveportRowChanging" msprop:Generator_RowEvHandlerName="bts_receiveportRowChangeEventHandler" msprop:Generator_RowDeletedName="bts_receiveportRowDeleted" msprop:Generator_RowClassName="bts_receiveportRow" msprop:Generator_UserTableName="bts_receiveport" msprop:Generator_RowEvArgName="bts_receiveportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:int" />
+              <xs:element name="nvcName" msprop:Generator_ColumnVarNameInTable="columnnvcName" msprop:Generator_ColumnPropNameInRow="nvcName" msprop:Generator_ColumnPropNameInTable="nvcNameColumn" msprop:Generator_UserColumnName="nvcName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bTwoWay" msprop:Generator_ColumnVarNameInTable="columnbTwoWay" msprop:Generator_ColumnPropNameInRow="bTwoWay" msprop:Generator_ColumnPropNameInTable="bTwoWayColumn" msprop:Generator_UserColumnName="bTwoWay" type="xs:boolean" />
+              <xs:element name="nAuthentication" msprop:Generator_ColumnVarNameInTable="columnnAuthentication" msprop:Generator_ColumnPropNameInRow="nAuthentication" msprop:Generator_ColumnPropNameInTable="nAuthenticationColumn" msprop:Generator_UserColumnName="nAuthentication" type="xs:int" />
+              <xs:element name="nSendPipelineId" msprop:Generator_ColumnVarNameInTable="columnnSendPipelineId" msprop:Generator_ColumnPropNameInRow="nSendPipelineId" msprop:Generator_ColumnPropNameInTable="nSendPipelineIdColumn" msprop:Generator_UserColumnName="nSendPipelineId" type="xs:int" minOccurs="0" />
+              <xs:element name="nvcSendPipelineData" msprop:Generator_ColumnVarNameInTable="columnnvcSendPipelineData" msprop:Generator_ColumnPropNameInRow="nvcSendPipelineData" msprop:Generator_ColumnPropNameInTable="nvcSendPipelineDataColumn" msprop:Generator_UserColumnName="nvcSendPipelineData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTracking" msprop:Generator_ColumnVarNameInTable="columnnTracking" msprop:Generator_ColumnPropNameInRow="nTracking" msprop:Generator_ColumnPropNameInTable="nTrackingColumn" msprop:Generator_UserColumnName="nTracking" type="xs:int" minOccurs="0" />
+              <xs:element name="uidGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidGUID" msprop:Generator_ColumnPropNameInRow="uidGUID" msprop:Generator_ColumnPropNameInTable="uidGUIDColumn" msprop:Generator_UserColumnName="uidGUID" type="xs:string" />
+              <xs:element name="nvcCustomData" msprop:Generator_ColumnVarNameInTable="columnnvcCustomData" msprop:Generator_ColumnPropNameInRow="nvcCustomData" msprop:Generator_ColumnPropNameInTable="nvcCustomDataColumn" msprop:Generator_UserColumnName="nvcCustomData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateModified" msprop:Generator_ColumnVarNameInTable="columnDateModified" msprop:Generator_ColumnPropNameInRow="DateModified" msprop:Generator_ColumnPropNameInTable="DateModifiedColumn" msprop:Generator_UserColumnName="DateModified" type="xs:dateTime" />
+              <xs:element name="nApplicationID" msprop:Generator_ColumnVarNameInTable="columnnApplicationID" msprop:Generator_ColumnPropNameInRow="nApplicationID" msprop:Generator_ColumnPropNameInTable="nApplicationIDColumn" msprop:Generator_UserColumnName="nApplicationID" type="xs:int" />
+              <xs:element name="nvcDescription" msprop:Generator_ColumnVarNameInTable="columnnvcDescription" msprop:Generator_ColumnPropNameInRow="nvcDescription" msprop:Generator_ColumnPropNameInTable="nvcDescriptionColumn" msprop:Generator_UserColumnName="nvcDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bRouteFailedMessage" msprop:Generator_ColumnVarNameInTable="columnbRouteFailedMessage" msprop:Generator_ColumnPropNameInRow="bRouteFailedMessage" msprop:Generator_ColumnPropNameInTable="bRouteFailedMessageColumn" msprop:Generator_UserColumnName="bRouteFailedMessage" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bts_sendport" msprop:Generator_TableClassName="bts_sendportDataTable" msprop:Generator_TableVarName="tablebts_sendport" msprop:Generator_RowChangedName="bts_sendportRowChanged" msprop:Generator_TablePropName="bts_sendport" msprop:Generator_RowDeletingName="bts_sendportRowDeleting" msprop:Generator_RowChangingName="bts_sendportRowChanging" msprop:Generator_RowEvHandlerName="bts_sendportRowChangeEventHandler" msprop:Generator_RowDeletedName="bts_sendportRowDeleted" msprop:Generator_RowClassName="bts_sendportRow" msprop:Generator_UserTableName="bts_sendport" msprop:Generator_RowEvArgName="bts_sendportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:int" />
+              <xs:element name="nvcName" msprop:Generator_ColumnVarNameInTable="columnnvcName" msprop:Generator_ColumnPropNameInRow="nvcName" msprop:Generator_ColumnPropNameInTable="nvcNameColumn" msprop:Generator_UserColumnName="nvcName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nApplicationTypeId" msprop:Generator_ColumnVarNameInTable="columnnApplicationTypeId" msprop:Generator_ColumnPropNameInRow="nApplicationTypeId" msprop:Generator_ColumnPropNameInTable="nApplicationTypeIdColumn" msprop:Generator_UserColumnName="nApplicationTypeId" type="xs:int" minOccurs="0" />
+              <xs:element name="nvcApplicationTypeData" msprop:Generator_ColumnVarNameInTable="columnnvcApplicationTypeData" msprop:Generator_ColumnPropNameInRow="nvcApplicationTypeData" msprop:Generator_ColumnPropNameInTable="nvcApplicationTypeDataColumn" msprop:Generator_UserColumnName="nvcApplicationTypeData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nvcEncryptionCert" msprop:Generator_ColumnVarNameInTable="columnnvcEncryptionCert" msprop:Generator_ColumnPropNameInRow="nvcEncryptionCert" msprop:Generator_ColumnPropNameInTable="nvcEncryptionCertColumn" msprop:Generator_UserColumnName="nvcEncryptionCert" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nvcEncryptionCertHash" msprop:Generator_ColumnVarNameInTable="columnnvcEncryptionCertHash" msprop:Generator_ColumnPropNameInRow="nvcEncryptionCertHash" msprop:Generator_ColumnPropNameInTable="nvcEncryptionCertHashColumn" msprop:Generator_UserColumnName="nvcEncryptionCertHash" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nSendPipelineID" msprop:Generator_ColumnVarNameInTable="columnnSendPipelineID" msprop:Generator_ColumnPropNameInRow="nSendPipelineID" msprop:Generator_ColumnPropNameInTable="nSendPipelineIDColumn" msprop:Generator_UserColumnName="nSendPipelineID" type="xs:int" />
+              <xs:element name="nvcSendPipelineData" msprop:Generator_ColumnVarNameInTable="columnnvcSendPipelineData" msprop:Generator_ColumnPropNameInRow="nvcSendPipelineData" msprop:Generator_ColumnPropNameInTable="nvcSendPipelineDataColumn" msprop:Generator_UserColumnName="nvcSendPipelineData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bDynamic" msprop:Generator_ColumnVarNameInTable="columnbDynamic" msprop:Generator_ColumnPropNameInRow="bDynamic" msprop:Generator_ColumnPropNameInTable="bDynamicColumn" msprop:Generator_UserColumnName="bDynamic" type="xs:boolean" />
+              <xs:element name="bTwoWay" msprop:Generator_ColumnVarNameInTable="columnbTwoWay" msprop:Generator_ColumnPropNameInRow="bTwoWay" msprop:Generator_ColumnPropNameInTable="bTwoWayColumn" msprop:Generator_UserColumnName="bTwoWay" type="xs:boolean" />
+              <xs:element name="nReceivePipelineID" msprop:Generator_ColumnVarNameInTable="columnnReceivePipelineID" msprop:Generator_ColumnPropNameInRow="nReceivePipelineID" msprop:Generator_ColumnPropNameInTable="nReceivePipelineIDColumn" msprop:Generator_UserColumnName="nReceivePipelineID" type="xs:int" minOccurs="0" />
+              <xs:element name="nvcReceivePipelineData" msprop:Generator_ColumnVarNameInTable="columnnvcReceivePipelineData" msprop:Generator_ColumnPropNameInRow="nvcReceivePipelineData" msprop:Generator_ColumnPropNameInTable="nvcReceivePipelineDataColumn" msprop:Generator_UserColumnName="nvcReceivePipelineData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTracking" msprop:Generator_ColumnVarNameInTable="columnnTracking" msprop:Generator_ColumnPropNameInRow="nTracking" msprop:Generator_ColumnPropNameInTable="nTrackingColumn" msprop:Generator_UserColumnName="nTracking" type="xs:int" minOccurs="0" />
+              <xs:element name="nPortStatus" msprop:Generator_ColumnVarNameInTable="columnnPortStatus" msprop:Generator_ColumnPropNameInRow="nPortStatus" msprop:Generator_ColumnPropNameInTable="nPortStatusColumn" msprop:Generator_UserColumnName="nPortStatus" type="xs:int" />
+              <xs:element name="nvcFilter" msprop:Generator_ColumnVarNameInTable="columnnvcFilter" msprop:Generator_ColumnPropNameInRow="nvcFilter" msprop:Generator_ColumnPropNameInTable="nvcFilterColumn" msprop:Generator_UserColumnName="nvcFilter">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uidGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidGUID" msprop:Generator_ColumnPropNameInRow="uidGUID" msprop:Generator_ColumnPropNameInTable="uidGUIDColumn" msprop:Generator_UserColumnName="uidGUID" type="xs:string" />
+              <xs:element name="nvcCustomData" msprop:Generator_ColumnVarNameInTable="columnnvcCustomData" msprop:Generator_ColumnPropNameInRow="nvcCustomData" msprop:Generator_ColumnPropNameInTable="nvcCustomDataColumn" msprop:Generator_UserColumnName="nvcCustomData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nPriority" msprop:Generator_ColumnVarNameInTable="columnnPriority" msprop:Generator_ColumnPropNameInRow="nPriority" msprop:Generator_ColumnPropNameInTable="nPriorityColumn" msprop:Generator_UserColumnName="nPriority" type="xs:int" />
+              <xs:element name="DateModified" msprop:Generator_ColumnVarNameInTable="columnDateModified" msprop:Generator_ColumnPropNameInRow="DateModified" msprop:Generator_ColumnPropNameInTable="DateModifiedColumn" msprop:Generator_UserColumnName="DateModified" type="xs:dateTime" />
+              <xs:element name="nApplicationID" msprop:Generator_ColumnVarNameInTable="columnnApplicationID" msprop:Generator_ColumnPropNameInRow="nApplicationID" msprop:Generator_ColumnPropNameInTable="nApplicationIDColumn" msprop:Generator_UserColumnName="nApplicationID" type="xs:int" />
+              <xs:element name="nvcDescription" msprop:Generator_ColumnVarNameInTable="columnnvcDescription" msprop:Generator_ColumnPropNameInRow="nvcDescription" msprop:Generator_ColumnPropNameInTable="nvcDescriptionColumn" msprop:Generator_UserColumnName="nvcDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bStopSendingOnFailure" msprop:Generator_ColumnVarNameInTable="columnbStopSendingOnFailure" msprop:Generator_ColumnPropNameInRow="bStopSendingOnFailure" msprop:Generator_ColumnPropNameInTable="bStopSendingOnFailureColumn" msprop:Generator_UserColumnName="bStopSendingOnFailure" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bRouteFailedMessage" msprop:Generator_ColumnVarNameInTable="columnbRouteFailedMessage" msprop:Generator_ColumnPropNameInRow="bRouteFailedMessage" msprop:Generator_ColumnPropNameInTable="bRouteFailedMessageColumn" msprop:Generator_UserColumnName="bRouteFailedMessage" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bOrderedDeliveryforDynamicPort" msprop:Generator_ColumnVarNameInTable="columnbOrderedDeliveryforDynamicPort" msprop:Generator_ColumnPropNameInRow="bOrderedDeliveryforDynamicPort" msprop:Generator_ColumnPropNameInTable="bOrderedDeliveryforDynamicPortColumn" msprop:Generator_UserColumnName="bOrderedDeliveryforDynamicPort" type="xs:boolean" />
+              <xs:element name="bOrderPerAddressForDynamicPort" msprop:Generator_ColumnVarNameInTable="columnbOrderPerAddressForDynamicPort" msprop:Generator_ColumnPropNameInRow="bOrderPerAddressForDynamicPort" msprop:Generator_ColumnPropNameInTable="bOrderPerAddressForDynamicPortColumn" msprop:Generator_UserColumnName="bOrderPerAddressForDynamicPort" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bts_sendport_transport" msprop:Generator_TableClassName="bts_sendport_transportDataTable" msprop:Generator_TableVarName="tablebts_sendport_transport" msprop:Generator_RowChangedName="bts_sendport_transportRowChanged" msprop:Generator_TablePropName="bts_sendport_transport" msprop:Generator_RowDeletingName="bts_sendport_transportRowDeleting" msprop:Generator_RowChangingName="bts_sendport_transportRowChanging" msprop:Generator_RowEvHandlerName="bts_sendport_transportRowChangeEventHandler" msprop:Generator_RowDeletedName="bts_sendport_transportRowDeleted" msprop:Generator_RowClassName="bts_sendport_transportRow" msprop:Generator_UserTableName="bts_sendport_transport" msprop:Generator_RowEvArgName="bts_sendport_transportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:int" />
+              <xs:element name="nvcAddress" msprop:Generator_ColumnVarNameInTable="columnnvcAddress" msprop:Generator_ColumnPropNameInRow="nvcAddress" msprop:Generator_ColumnPropNameInTable="nvcAddressColumn" msprop:Generator_UserColumnName="nvcAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nTransportTypeId" msprop:Generator_ColumnVarNameInTable="columnnTransportTypeId" msprop:Generator_ColumnPropNameInRow="nTransportTypeId" msprop:Generator_ColumnPropNameInTable="nTransportTypeIdColumn" msprop:Generator_UserColumnName="nTransportTypeId" type="xs:int" minOccurs="0" />
+              <xs:element name="nvcTransportTypeData" msprop:Generator_ColumnVarNameInTable="columnnvcTransportTypeData" msprop:Generator_ColumnPropNameInRow="nvcTransportTypeData" msprop:Generator_ColumnPropNameInTable="nvcTransportTypeDataColumn" msprop:Generator_UserColumnName="nvcTransportTypeData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bOrderedDelivery" msprop:Generator_ColumnVarNameInTable="columnbOrderedDelivery" msprop:Generator_ColumnPropNameInRow="bOrderedDelivery" msprop:Generator_ColumnPropNameInTable="bOrderedDeliveryColumn" msprop:Generator_UserColumnName="bOrderedDelivery" type="xs:boolean" />
+              <xs:element name="nDeliveryNotification" msprop:Generator_ColumnVarNameInTable="columnnDeliveryNotification" msprop:Generator_ColumnPropNameInRow="nDeliveryNotification" msprop:Generator_ColumnPropNameInTable="nDeliveryNotificationColumn" msprop:Generator_UserColumnName="nDeliveryNotification" type="xs:int" />
+              <xs:element name="nRetryCount" msprop:Generator_ColumnVarNameInTable="columnnRetryCount" msprop:Generator_ColumnPropNameInRow="nRetryCount" msprop:Generator_ColumnPropNameInTable="nRetryCountColumn" msprop:Generator_UserColumnName="nRetryCount" type="xs:int" />
+              <xs:element name="nRetryInterval" msprop:Generator_ColumnVarNameInTable="columnnRetryInterval" msprop:Generator_ColumnPropNameInRow="nRetryInterval" msprop:Generator_ColumnPropNameInTable="nRetryIntervalColumn" msprop:Generator_UserColumnName="nRetryInterval" type="xs:int" />
+              <xs:element name="bIsServiceWindow" msprop:Generator_ColumnVarNameInTable="columnbIsServiceWindow" msprop:Generator_ColumnPropNameInRow="bIsServiceWindow" msprop:Generator_ColumnPropNameInTable="bIsServiceWindowColumn" msprop:Generator_UserColumnName="bIsServiceWindow" type="xs:boolean" />
+              <xs:element name="dtFromTime" msprop:Generator_ColumnVarNameInTable="columndtFromTime" msprop:Generator_ColumnPropNameInRow="dtFromTime" msprop:Generator_ColumnPropNameInTable="dtFromTimeColumn" msprop:Generator_UserColumnName="dtFromTime" type="xs:dateTime" />
+              <xs:element name="dtToTime" msprop:Generator_ColumnVarNameInTable="columndtToTime" msprop:Generator_ColumnPropNameInRow="dtToTime" msprop:Generator_ColumnPropNameInTable="dtToTimeColumn" msprop:Generator_UserColumnName="dtToTime" type="xs:dateTime" />
+              <xs:element name="bIsPrimary" msprop:Generator_ColumnVarNameInTable="columnbIsPrimary" msprop:Generator_ColumnPropNameInRow="bIsPrimary" msprop:Generator_ColumnPropNameInTable="bIsPrimaryColumn" msprop:Generator_UserColumnName="bIsPrimary" type="xs:boolean" />
+              <xs:element name="bSSOMappingExists" msprop:Generator_ColumnVarNameInTable="columnbSSOMappingExists" msprop:Generator_ColumnPropNameInRow="bSSOMappingExists" msprop:Generator_ColumnPropNameInTable="bSSOMappingExistsColumn" msprop:Generator_UserColumnName="bSSOMappingExists" type="xs:boolean" />
+              <xs:element name="nSendPortID" msprop:Generator_ColumnVarNameInTable="columnnSendPortID" msprop:Generator_ColumnPropNameInRow="nSendPortID" msprop:Generator_ColumnPropNameInTable="nSendPortIDColumn" msprop:Generator_UserColumnName="nSendPortID" type="xs:int" />
+              <xs:element name="uidGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidGUID" msprop:Generator_ColumnPropNameInRow="uidGUID" msprop:Generator_ColumnPropNameInTable="uidGUIDColumn" msprop:Generator_UserColumnName="uidGUID" type="xs:string" />
+              <xs:element name="DateModified" msprop:Generator_ColumnVarNameInTable="columnDateModified" msprop:Generator_ColumnPropNameInRow="DateModified" msprop:Generator_ColumnPropNameInTable="DateModifiedColumn" msprop:Generator_UserColumnName="DateModified" type="xs:dateTime" />
+              <xs:element name="nSendHandlerID" msprop:Generator_ColumnVarNameInTable="columnnSendHandlerID" msprop:Generator_ColumnPropNameInRow="nSendHandlerID" msprop:Generator_ColumnPropNameInTable="nSendHandlerIDColumn" msprop:Generator_UserColumnName="nSendHandlerID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bts_sendportgroup" msprop:Generator_TableClassName="bts_sendportgroupDataTable" msprop:Generator_TableVarName="tablebts_sendportgroup" msprop:Generator_RowChangedName="bts_sendportgroupRowChanged" msprop:Generator_TablePropName="bts_sendportgroup" msprop:Generator_RowDeletingName="bts_sendportgroupRowDeleting" msprop:Generator_RowChangingName="bts_sendportgroupRowChanging" msprop:Generator_RowEvHandlerName="bts_sendportgroupRowChangeEventHandler" msprop:Generator_RowDeletedName="bts_sendportgroupRowDeleted" msprop:Generator_RowClassName="bts_sendportgroupRow" msprop:Generator_UserTableName="bts_sendportgroup" msprop:Generator_RowEvArgName="bts_sendportgroupRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:int" />
+              <xs:element name="nvcName" msprop:Generator_ColumnVarNameInTable="columnnvcName" msprop:Generator_ColumnPropNameInRow="nvcName" msprop:Generator_ColumnPropNameInTable="nvcNameColumn" msprop:Generator_UserColumnName="nvcName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nPortStatus" msprop:Generator_ColumnVarNameInTable="columnnPortStatus" msprop:Generator_ColumnPropNameInRow="nPortStatus" msprop:Generator_ColumnPropNameInTable="nPortStatusColumn" msprop:Generator_UserColumnName="nPortStatus" type="xs:int" />
+              <xs:element name="nvcFilter" msprop:Generator_ColumnVarNameInTable="columnnvcFilter" msprop:Generator_ColumnPropNameInRow="nvcFilter" msprop:Generator_ColumnPropNameInTable="nvcFilterColumn" msprop:Generator_UserColumnName="nvcFilter">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uidGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidGUID" msprop:Generator_ColumnPropNameInRow="uidGUID" msprop:Generator_ColumnPropNameInTable="uidGUIDColumn" msprop:Generator_UserColumnName="uidGUID" type="xs:string" />
+              <xs:element name="nvcCustomData" msprop:Generator_ColumnVarNameInTable="columnnvcCustomData" msprop:Generator_ColumnPropNameInRow="nvcCustomData" msprop:Generator_ColumnPropNameInTable="nvcCustomDataColumn" msprop:Generator_UserColumnName="nvcCustomData" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateModified" msprop:Generator_ColumnVarNameInTable="columnDateModified" msprop:Generator_ColumnPropNameInRow="DateModified" msprop:Generator_ColumnPropNameInTable="DateModifiedColumn" msprop:Generator_UserColumnName="DateModified" type="xs:dateTime" />
+              <xs:element name="nApplicationID" msprop:Generator_ColumnVarNameInTable="columnnApplicationID" msprop:Generator_ColumnPropNameInRow="nApplicationID" msprop:Generator_ColumnPropNameInTable="nApplicationIDColumn" msprop:Generator_UserColumnName="nApplicationID" type="xs:int" />
+              <xs:element name="nvcDescription" msprop:Generator_ColumnVarNameInTable="columnnvcDescription" msprop:Generator_ColumnPropNameInRow="nvcDescription" msprop:Generator_ColumnPropNameInTable="nvcDescriptionColumn" msprop:Generator_UserColumnName="nvcDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bts_orchestration_port" msprop:Generator_TableClassName="bts_orchestration_portDataTable" msprop:Generator_TableVarName="tablebts_orchestration_port" msprop:Generator_RowChangedName="bts_orchestration_portRowChanged" msprop:Generator_TablePropName="bts_orchestration_port" msprop:Generator_RowDeletingName="bts_orchestration_portRowDeleting" msprop:Generator_RowChangingName="bts_orchestration_portRowChanging" msprop:Generator_RowEvHandlerName="bts_orchestration_portRowChangeEventHandler" msprop:Generator_RowDeletedName="bts_orchestration_portRowDeleted" msprop:Generator_RowClassName="bts_orchestration_portRow" msprop:Generator_UserTableName="bts_orchestration_port" msprop:Generator_RowEvArgName="bts_orchestration_portRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:int" />
+              <xs:element name="uidGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidGUID" msprop:Generator_ColumnPropNameInRow="uidGUID" msprop:Generator_ColumnPropNameInTable="uidGUIDColumn" msprop:Generator_UserColumnName="uidGUID" type="xs:string" minOccurs="0" />
+              <xs:element name="nOrchestrationID" msprop:Generator_ColumnVarNameInTable="columnnOrchestrationID" msprop:Generator_ColumnPropNameInRow="nOrchestrationID" msprop:Generator_ColumnPropNameInTable="nOrchestrationIDColumn" msprop:Generator_UserColumnName="nOrchestrationID" type="xs:int" />
+              <xs:element name="nPortTypeID" msprop:Generator_ColumnVarNameInTable="columnnPortTypeID" msprop:Generator_ColumnPropNameInRow="nPortTypeID" msprop:Generator_ColumnPropNameInTable="nPortTypeIDColumn" msprop:Generator_UserColumnName="nPortTypeID" type="xs:int" />
+              <xs:element name="nvcName" msprop:Generator_ColumnVarNameInTable="columnnvcName" msprop:Generator_ColumnPropNameInRow="nvcName" msprop:Generator_ColumnPropNameInTable="nvcNameColumn" msprop:Generator_UserColumnName="nvcName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nPolarity" msprop:Generator_ColumnVarNameInTable="columnnPolarity" msprop:Generator_ColumnPropNameInRow="nPolarity" msprop:Generator_ColumnPropNameInTable="nPolarityColumn" msprop:Generator_UserColumnName="nPolarity" type="xs:int" />
+              <xs:element name="nBindingOption" msprop:Generator_ColumnVarNameInTable="columnnBindingOption" msprop:Generator_ColumnPropNameInRow="nBindingOption" msprop:Generator_ColumnPropNameInTable="nBindingOptionColumn" msprop:Generator_UserColumnName="nBindingOption" type="xs:int" />
+              <xs:element name="nRolePortTypeID" msprop:Generator_ColumnVarNameInTable="columnnRolePortTypeID" msprop:Generator_ColumnPropNameInRow="nRolePortTypeID" msprop:Generator_ColumnPropNameInTable="nRolePortTypeIDColumn" msprop:Generator_UserColumnName="nRolePortTypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="bLink" msprop:Generator_ColumnVarNameInTable="columnbLink" msprop:Generator_ColumnPropNameInRow="bLink" msprop:Generator_ColumnPropNameInTable="bLinkColumn" msprop:Generator_UserColumnName="bLink" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bts_orchestration" msprop:Generator_TableClassName="bts_orchestrationDataTable" msprop:Generator_TableVarName="tablebts_orchestration" msprop:Generator_RowChangedName="bts_orchestrationRowChanged" msprop:Generator_TablePropName="bts_orchestration" msprop:Generator_RowDeletingName="bts_orchestrationRowDeleting" msprop:Generator_RowChangingName="bts_orchestrationRowChanging" msprop:Generator_RowEvHandlerName="bts_orchestrationRowChangeEventHandler" msprop:Generator_RowDeletedName="bts_orchestrationRowDeleted" msprop:Generator_RowClassName="bts_orchestrationRow" msprop:Generator_UserTableName="bts_orchestration" msprop:Generator_RowEvArgName="bts_orchestrationRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:int" />
+              <xs:element name="uidGUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidGUID" msprop:Generator_ColumnPropNameInRow="uidGUID" msprop:Generator_ColumnPropNameInTable="uidGUIDColumn" msprop:Generator_UserColumnName="uidGUID" type="xs:string" minOccurs="0" />
+              <xs:element name="uidOrchestrationType" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidOrchestrationType" msprop:Generator_ColumnPropNameInRow="uidOrchestrationType" msprop:Generator_ColumnPropNameInTable="uidOrchestrationTypeColumn" msprop:Generator_UserColumnName="uidOrchestrationType" type="xs:string" minOccurs="0" />
+              <xs:element name="nAssemblyID" msprop:Generator_ColumnVarNameInTable="columnnAssemblyID" msprop:Generator_ColumnPropNameInRow="nAssemblyID" msprop:Generator_ColumnPropNameInTable="nAssemblyIDColumn" msprop:Generator_UserColumnName="nAssemblyID" type="xs:int" />
+              <xs:element name="nItemID" msprop:Generator_ColumnVarNameInTable="columnnItemID" msprop:Generator_ColumnPropNameInRow="nItemID" msprop:Generator_ColumnPropNameInTable="nItemIDColumn" msprop:Generator_UserColumnName="nItemID" type="xs:int" minOccurs="0" />
+              <xs:element name="nvcNamespace" msprop:Generator_ColumnVarNameInTable="columnnvcNamespace" msprop:Generator_ColumnPropNameInRow="nvcNamespace" msprop:Generator_ColumnPropNameInTable="nvcNamespaceColumn" msprop:Generator_UserColumnName="nvcNamespace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nvcName" msprop:Generator_ColumnVarNameInTable="columnnvcName" msprop:Generator_ColumnPropNameInRow="nvcName" msprop:Generator_ColumnPropNameInTable="nvcNameColumn" msprop:Generator_UserColumnName="nvcName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nvcFullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnvcFullName" msprop:Generator_ColumnPropNameInRow="nvcFullName" msprop:Generator_ColumnPropNameInTable="nvcFullNameColumn" msprop:Generator_UserColumnName="nvcFullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="513" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nOrchestrationInfo" msprop:Generator_ColumnVarNameInTable="columnnOrchestrationInfo" msprop:Generator_ColumnPropNameInRow="nOrchestrationInfo" msprop:Generator_ColumnPropNameInTable="nOrchestrationInfoColumn" msprop:Generator_UserColumnName="nOrchestrationInfo" type="xs:int" />
+              <xs:element name="nOrchestrationStatus" msprop:Generator_ColumnVarNameInTable="columnnOrchestrationStatus" msprop:Generator_ColumnPropNameInRow="nOrchestrationStatus" msprop:Generator_ColumnPropNameInTable="nOrchestrationStatusColumn" msprop:Generator_UserColumnName="nOrchestrationStatus" type="xs:int" />
+              <xs:element name="nAdminHostID" msprop:Generator_ColumnVarNameInTable="columnnAdminHostID" msprop:Generator_ColumnPropNameInRow="nAdminHostID" msprop:Generator_ColumnPropNameInTable="nAdminHostIDColumn" msprop:Generator_UserColumnName="nAdminHostID" type="xs:int" minOccurs="0" />
+              <xs:element name="dtModified" msprop:Generator_ColumnVarNameInTable="columndtModified" msprop:Generator_ColumnPropNameInRow="dtModified" msprop:Generator_ColumnPropNameInTable="dtModifiedColumn" msprop:Generator_UserColumnName="dtModified" type="xs:dateTime" />
+              <xs:element name="nvcDescription" msprop:Generator_ColumnVarNameInTable="columnnvcDescription" msprop:Generator_ColumnPropNameInRow="nvcDescription" msprop:Generator_ColumnPropNameInTable="nvcDescriptionColumn" msprop:Generator_UserColumnName="nvcDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PredicateGroup" msprop:Generator_TableClassName="PredicateGroupDataTable" msprop:Generator_TableVarName="tablePredicateGroup" msprop:Generator_RowChangedName="PredicateGroupRowChanged" msprop:Generator_TablePropName="PredicateGroup" msprop:Generator_RowDeletingName="PredicateGroupRowDeleting" msprop:Generator_RowChangingName="PredicateGroupRowChanging" msprop:Generator_RowEvHandlerName="PredicateGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="PredicateGroupRowDeleted" msprop:Generator_RowClassName="PredicateGroupRow" msprop:Generator_UserTableName="PredicateGroup" msprop:Generator_RowEvArgName="PredicateGroupRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="uidPredicateANDGroupID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidPredicateANDGroupID" msprop:Generator_ColumnPropNameInRow="uidPredicateANDGroupID" msprop:Generator_ColumnPropNameInTable="uidPredicateANDGroupIDColumn" msprop:Generator_UserColumnName="uidPredicateANDGroupID" type="xs:string" />
+              <xs:element name="uidPredicateORGroupID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidPredicateORGroupID" msprop:Generator_ColumnPropNameInRow="uidPredicateORGroupID" msprop:Generator_ColumnPropNameInTable="uidPredicateORGroupIDColumn" msprop:Generator_UserColumnName="uidPredicateORGroupID" type="xs:string" />
+              <xs:element name="nNumFirstPassPredicates" msprop:Generator_ColumnVarNameInTable="columnnNumFirstPassPredicates" msprop:Generator_ColumnPropNameInRow="nNumFirstPassPredicates" msprop:Generator_ColumnPropNameInTable="nNumFirstPassPredicatesColumn" msprop:Generator_UserColumnName="nNumFirstPassPredicates" type="xs:int" />
+              <xs:element name="nNumSecondPassPredicates" msprop:Generator_ColumnVarNameInTable="columnnNumSecondPassPredicates" msprop:Generator_ColumnPropNameInRow="nNumSecondPassPredicates" msprop:Generator_ColumnPropNameInTable="nNumSecondPassPredicatesColumn" msprop:Generator_UserColumnName="nNumSecondPassPredicates" type="xs:int" />
+              <xs:element name="fIsDistributionList" msprop:Generator_ColumnVarNameInTable="columnfIsDistributionList" msprop:Generator_ColumnPropNameInRow="fIsDistributionList" msprop:Generator_ColumnPropNameInTable="fIsDistributionListColumn" msprop:Generator_UserColumnName="fIsDistributionList" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Conditions" msprop:Generator_TableClassName="ConditionsDataTable" msprop:Generator_TableVarName="tableConditions" msprop:Generator_RowChangedName="ConditionsRowChanged" msprop:Generator_TablePropName="Conditions" msprop:Generator_RowDeletingName="ConditionsRowDeleting" msprop:Generator_RowChangingName="ConditionsRowChanging" msprop:Generator_RowEvHandlerName="ConditionsRowChangeEventHandler" msprop:Generator_RowDeletedName="ConditionsRowDeleted" msprop:Generator_RowClassName="ConditionsRow" msprop:Generator_UserTableName="Conditions" msprop:Generator_RowEvArgName="ConditionsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnID" msprop:Generator_ColumnPropNameInRow="nID" msprop:Generator_ColumnPropNameInTable="nIDColumn" msprop:Generator_UserColumnName="nID" type="xs:long" minOccurs="0" />
+              <xs:element name="PredType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPredType" msprop:Generator_ColumnPropNameInRow="PredType" msprop:Generator_ColumnPropNameInTable="PredTypeColumn" msprop:Generator_UserColumnName="PredType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uidPropID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnuidPropID" msprop:Generator_ColumnPropNameInRow="uidPropID" msprop:Generator_ColumnPropNameInTable="uidPropIDColumn" msprop:Generator_UserColumnName="uidPropID" type="xs:string" minOccurs="0" />
+              <xs:element name="vtValue" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnvtValue" msprop:Generator_ColumnPropNameInRow="vtValue" msprop:Generator_ColumnPropNameInTable="vtValueColumn" msprop:Generator_UserColumnName="vtValue" type="xs:anyType" minOccurs="0" />
+              <xs:element name="uidPredicateGroupID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnuidPredicateGroupID" msprop:Generator_ColumnPropNameInRow="uidPredicateGroupID" msprop:Generator_ColumnPropNameInTable="uidPredicateGroupIDColumn" msprop:Generator_UserColumnName="uidPredicateGroupID" type="xs:string" />
+              <xs:element name="tnPass" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntnPass" msprop:Generator_ColumnPropNameInRow="tnPass" msprop:Generator_ColumnPropNameInTable="tnPassColumn" msprop:Generator_UserColumnName="tnPass" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bt_DocumentSpec" msprop:Generator_TableClassName="bt_DocumentSpecDataTable" msprop:Generator_TableVarName="tablebt_DocumentSpec" msprop:Generator_RowChangedName="bt_DocumentSpecRowChanged" msprop:Generator_TablePropName="bt_DocumentSpec" msprop:Generator_RowDeletingName="bt_DocumentSpecRowDeleting" msprop:Generator_RowChangingName="bt_DocumentSpecRowChanging" msprop:Generator_RowEvHandlerName="bt_DocumentSpecRowChangeEventHandler" msprop:Generator_RowDeletedName="bt_DocumentSpecRowDeleted" msprop:Generator_RowClassName="bt_DocumentSpecRow" msprop:Generator_UserTableName="bt_DocumentSpec" msprop:Generator_RowEvArgName="bt_DocumentSpecRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
+              <xs:element name="msgtype" msprop:Generator_ColumnVarNameInTable="columnmsgtype" msprop:Generator_ColumnPropNameInRow="msgtype" msprop:Generator_ColumnPropNameInTable="msgtypeColumn" msprop:Generator_UserColumnName="msgtype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2048" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="is_property_schema" msprop:Generator_ColumnVarNameInTable="columnis_property_schema" msprop:Generator_ColumnPropNameInRow="is_property_schema" msprop:Generator_ColumnPropNameInTable="is_property_schemaColumn" msprop:Generator_UserColumnName="is_property_schema" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Subscription" msprop:Generator_TableClassName="SubscriptionDataTable" msprop:Generator_TableVarName="tableSubscription" msprop:Generator_RowChangedName="SubscriptionRowChanged" msprop:Generator_TablePropName="Subscription" msprop:Generator_RowDeletingName="SubscriptionRowDeleting" msprop:Generator_RowChangingName="SubscriptionRowChanging" msprop:Generator_RowEvHandlerName="SubscriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="SubscriptionRowDeleted" msprop:Generator_RowClassName="SubscriptionRow" msprop:Generator_UserTableName="Subscription" msprop:Generator_RowEvArgName="SubscriptionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="uidSubID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidSubID" msprop:Generator_ColumnPropNameInRow="uidSubID" msprop:Generator_ColumnPropNameInTable="uidSubIDColumn" msprop:Generator_UserColumnName="uidSubID" type="xs:string" />
+              <xs:element name="uidSubGroupID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidSubGroupID" msprop:Generator_ColumnPropNameInRow="uidSubGroupID" msprop:Generator_ColumnPropNameInTable="uidSubGroupIDColumn" msprop:Generator_UserColumnName="uidSubGroupID" type="xs:string" minOccurs="0" />
+              <xs:element name="uidPortID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidPortID" msprop:Generator_ColumnPropNameInRow="uidPortID" msprop:Generator_ColumnPropNameInTable="uidPortIDColumn" msprop:Generator_UserColumnName="uidPortID" type="xs:string" minOccurs="0" />
+              <xs:element name="uidPredicateGroupID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnuidPredicateGroupID" msprop:Generator_ColumnPropNameInRow="uidPredicateGroupID" msprop:Generator_ColumnPropNameInTable="uidPredicateGroupIDColumn" msprop:Generator_UserColumnName="uidPredicateGroupID" type="xs:string" />
+              <xs:element name="fEnabled" msprop:Generator_ColumnVarNameInTable="columnfEnabled" msprop:Generator_ColumnPropNameInRow="fEnabled" msprop:Generator_ColumnPropNameInTable="fEnabledColumn" msprop:Generator_UserColumnName="fEnabled" type="xs:short" />
+              <xs:element name="fPaused" msprop:Generator_ColumnVarNameInTable="columnfPaused" msprop:Generator_ColumnPropNameInRow="fPaused" msprop:Generator_ColumnPropNameInTable="fPausedColumn" msprop:Generator_UserColumnName="fPaused" type="xs:unsignedByte" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="600" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BTAppName" msprop:Generator_ColumnVarNameInTable="columnBTAppName" msprop:Generator_ColumnPropNameInRow="BTAppName" msprop:Generator_ColumnPropNameInTable="BTAppNameColumn" msprop:Generator_UserColumnName="BTAppName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClassName" msprop:Generator_ColumnVarNameInTable="columnClassName" msprop:Generator_ColumnPropNameInRow="ClassName" msprop:Generator_ColumnPropNameInTable="ClassNameColumn" msprop:Generator_UserColumnName="ClassName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HostName" msprop:Generator_ColumnVarNameInTable="columnHostName" msprop:Generator_ColumnPropNameInRow="HostName" msprop:Generator_ColumnPropNameInTable="HostNameColumn" msprop:Generator_UserColumnName="HostName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bts_receiveport" />
+      <xs:field xpath="mstns:uidGUID" />
+    </xs:unique>
+    <xs:unique name="bts_sendport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bts_sendport" />
+      <xs:field xpath="mstns:uidGUID" />
+    </xs:unique>
+    <xs:unique name="bts_sendport_transport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bts_sendport_transport" />
+      <xs:field xpath="mstns:uidGUID" />
+    </xs:unique>
+    <xs:unique name="bts_sendportgroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bts_sendportgroup" />
+      <xs:field xpath="mstns:uidGUID" />
+    </xs:unique>
+    <xs:unique name="bts_orchestration_port_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bts_orchestration_port" />
+      <xs:field xpath="mstns:nID" />
+    </xs:unique>
+    <xs:unique name="bts_orchestration_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bts_orchestration" />
+      <xs:field xpath="mstns:nID" />
+    </xs:unique>
+    <xs:unique name="PredicateGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PredicateGroup" />
+      <xs:field xpath="mstns:uidPredicateANDGroupID" />
+      <xs:field xpath="mstns:nNumFirstPassPredicates" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="bts_sendport_transport_foreign_ownerid" msdata:parent="bts_sendport" msdata:child="bts_sendport_transport" msdata:parentkey="nID" msdata:childkey="nSendPortID" msprop:Generator_UserChildTable="bts_sendport_transport" msprop:Generator_ChildPropName="Getbts_sendport_transportRows" msprop:Generator_UserRelationName="bts_sendport_transport_foreign_ownerid" msprop:Generator_RelationVarName="relationbts_sendport_transport_foreign_ownerid" msprop:Generator_UserParentTable="bts_sendport" msprop:Generator_ParentPropName="bts_sendportRow" />
+      <msdata:Relationship name="FK_bts_orchestration_port_bts_orchestration" msdata:parent="bts_orchestration" msdata:child="bts_orchestration_port" msdata:parentkey="nID" msdata:childkey="nOrchestrationID" msprop:Generator_UserChildTable="bts_orchestration_port" msprop:Generator_ChildPropName="Getbts_orchestration_portRows" msprop:Generator_UserRelationName="FK_bts_orchestration_port_bts_orchestration" msprop:Generator_ParentPropName="bts_orchestrationRow" msprop:Generator_RelationVarName="relationFK_bts_orchestration_port_bts_orchestration" msprop:Generator_UserParentTable="bts_orchestration" />
+      <msdata:Relationship name="Subscription_PredicateGroup" msdata:parent="Subscription" msdata:child="PredicateGroup" msdata:parentkey="uidPredicateGroupID" msdata:childkey="uidPredicateORGroupID" msprop:Generator_UserChildTable="PredicateGroup" msprop:Generator_ChildPropName="GetPredicateGroupRows" msprop:Generator_UserRelationName="Subscription_PredicateGroup" msprop:Generator_RelationVarName="relationSubscription_PredicateGroup" msprop:Generator_UserParentTable="Subscription" msprop:Generator_ParentPropName="SubscriptionRow" />
+      <msdata:Relationship name="PredicateGroup_Conditions" msdata:parent="PredicateGroup" msdata:child="Conditions" msdata:parentkey="uidPredicateANDGroupID" msdata:childkey="uidPredicateGroupID" msprop:Generator_UserChildTable="Conditions" msprop:Generator_ChildPropName="GetConditionsRows" msprop:Generator_UserRelationName="PredicateGroup_Conditions" msprop:Generator_ParentPropName="PredicateGroupRow" msprop:Generator_RelationVarName="relationPredicateGroup_Conditions" msprop:Generator_UserParentTable="PredicateGroup" />
+      <msdata:Relationship name="Conditions_bt_DocumentSpec" msdata:parent="Conditions" msdata:child="bt_DocumentSpec" msdata:parentkey="uidPropID" msdata:childkey="id" msprop:Generator_UserChildTable="bt_DocumentSpec" msprop:Generator_ChildPropName="Getbt_DocumentSpecRows" msprop:Generator_UserRelationName="Conditions_bt_DocumentSpec" msprop:Generator_ParentPropName="ConditionsRow" msprop:Generator_RelationVarName="relationConditions_bt_DocumentSpec" msprop:Generator_UserParentTable="Conditions" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
